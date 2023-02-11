@@ -292,9 +292,7 @@ p{
         flex-wrap: wrap;
         margin-top: 8px;
     }
-    .link__scroll:last-child{
-        margin-top:-20px;
-    }
+
     .container-main{
         gap: 36px;
     }
@@ -311,6 +309,7 @@ p{
         margin-top: auto;
     }
 }
+
 
 /*-------------ФУТЕР КАК ОТСТУП-----------------------------------*/
 footer{
