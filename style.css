@@ -249,7 +249,7 @@ p{
 }
 .img{
     height: 176px;
-    background-image: url("/src/img/main.logo.JPG");
+    background-image: url("https://helgataleriko.github.io/layout_1.3/src/img/main.logo.jpg");
     background-size: 320px 176px;
 }
 /*-----------------320px----------------------------*/
