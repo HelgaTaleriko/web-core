@@ -1,0 +1,329 @@
+@font-face {
+    font-family: 'TT Lakes Bold';
+    src: url('./fonts/TTLakes-Bold.eot');
+    src: url('./fonts/TTLakes-Bold.eot?#iefix') format('embedded-opentype'),
+    url('./fonts/TTLakes-Bold.woff') format('woff'),
+    url('./fonts/TTLakes-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Lakes Regular';
+    src: url('./fonts/TTLakes-Regular.eot');
+    src: url('./fonts/TTLakes-Regular.eot?#iefix') format('embedded-opentype'),
+    url('./fonts/TTLakes-Regular.woff') format('woff'),
+    url('./fonts/TTLakes-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+html{
+    box-sizing: border-box;
+    background-color:#F8F8F8;
+}
+*,*::after,*::before{
+    box-sizing: inherit;
+}
+body{
+    margin: 0;
+    min-width: 320px;
+    overflow: hidden;
+}
+
+/*сбрасываем стиль кнопки*/
+button{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0;
+}
+
+/*-------- ХЕДЕР + ИКОНКИ---------------------------------------------------------------------------------------------*/
+.header{
+     margin: 0;
+     justify-content: center;
+     background-color: white;
+     min-height: 88px;
+     border: 1px solid #D9FFF5;
+ }
+
+nav.menu {
+    display: flex;
+    margin: 18px 16px 18px 16px;
+    justify-content: space-between;
+    align-items: center;
+    }
+/* Иконки */
+.menu__img-burger,
+.menu__img-checkstatus,
+.menu__img-repair {
+    width: 40px;
+    height: 40px;
+}
+
+.menu__img-divider2{
+    width: 8px;
+    height: 32px;
+}
+
+.menu__logo{
+    width: 96px;
+    height: 51px;
+}
+
+/*--------- 320px ------------------------------*/
+@media (min-width: 320px) {
+    .menu__img-divider1,
+    .menu__img-call,
+    .menu__img-chat,
+    .menu__img-profile,
+    .menu__name-checkstatus,
+    .menu__name-repair,
+    .title-1120 {
+        display: none;
+    }
+}
+/*--------- 784px -----------------------------*/
+@media (min-width: 784px) {
+    .title-1120,
+    .menu__name-checkstatus,
+    .menu__name-repair{
+        display: none;
+    }
+
+    .menu__img-divider1,
+    .menu__img-call,
+    .menu__img-chat,
+    .menu__img-profile{
+        display: block;
+    }
+    .menu__img-burger,
+    .menu__img-divider1{
+        margin-right: 20px;
+    }
+
+    .menu__logo{
+        margin-right: auto;
+    }
+
+    .menu__img-profile,
+    .menu__img-chat,
+    .menu__img-call,
+    .menu__img-divider2,
+    .menu__img-checkstatus,
+    .menu__img-repair{
+        margin-left: 16px;
+    }
+}
+/*--------- 1120px ---------------------------*/
+@media (min-width: 1120px) {
+    .header{
+        background-color:#F8F8F8;
+        border: none;
+    }
+
+    .menu__btn-burger,
+    .menu__btn-divider1,
+    .menu__logo,
+    .menu__btn-chat,
+    .menu__btn-call,
+    .menu__btn-profile,
+    .menu__btn-divider2,
+    div.title{
+        display: none;
+    }
+    .menu__name-checkstatus,
+    .menu__name-repair,
+    .title-1120{
+        display: block;
+    }
+
+    .menu__btn-repair,
+    .menu__btn-checkstatus{
+        display: flex;
+        gap: 8px;
+        align-items: center;
+    }
+    nav.menu{
+        height: 82px;
+        margin: 0;
+        padding-top: 42px;
+        padding-right: 32px;
+        justify-content: right;
+        gap: 32px;
+    }
+    .title-1120{
+        display: flex;
+        gap: 30px;
+        margin-right: auto;
+        align-items: center;
+    }
+    .title-1120__dash{
+        width: 3px;
+        height: 40px;
+    }
+}
+/*-----------КОНЕЦ ХЕДЕРА---------------------------------------------------------------------------------------------*/
+/*-----------ОСНОВНОЙ БЛОК---------------------------------------------------------------------------------------------*/
+#main{
+    background-color: #F8F8F8FF;
+}
+/* Заголовок --------------*/
+.title{
+    display: flex;
+    padding-top: 24px;
+    gap: 12px;
+}
+.title__dash{
+    margin-left: 0;
+}
+h1{
+    font-family: 'TT Lakes Bold';
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 40px;
+    margin: 0;
+    color: #1B1C21;
+}
+
+/*ссылки с прокруткой---------*/
+.link{
+    display: flex;
+    overflow: scroll;
+    margin-top: 24px;
+    padding-left: 16px;
+    gap: 28px;
+}
+
+.link__scroll {
+    text-decoration: none; /* Убираем подчёркивание */
+    font-family: 'TT Lakes Regular';
+    font-size: 16px;
+    white-space:nowrap;
+    letter-spacing: -0.2px;
+    color: #7E7E82;
+    padding: 8px 13px;
+
+}
+
+.link__scroll:hover{
+    background: #FFFFFF;
+    border: 2px solid #B8FFEC;
+    border-radius: 6px;
+}
+
+/*основной текст------------------*/
+p{
+    font-family: 'TT Lakes Regular';
+    font-size: 14px;
+    line-height: 18px;
+    margin: 0;
+    letter-spacing: 0.2px;
+    color: #1B1C21;
+}
+
+/*Читать далее-------------------*/
+.read-more{
+    width: 132px;
+    height: 24px;
+    margin-left: 16px;
+    margin-bottom: 16px;
+}
+.read-more__btn{
+    padding: 0;
+    width: 132px ;
+    height: 24px;
+    font-family: 'TT Lakes Regular';
+    font-weight:600;
+    font-size: 16px;
+    line-height: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: -0.2px;
+    color: #1B1C21;
+}
+.read-more__icon{
+    width: 24px;
+    height: 24px;
+}
+.img{
+    height: 176px;
+    background-image: url("img/_MG_3223.jpg");
+    background-size: 320px 176px;
+}
+/*-----------------320px----------------------------*/
+@media (min-width: 320px) {
+    .main-text{
+        overflow: scroll;
+        height: 90px;
+        margin: 24px 16px 16px 16px;
+    }
+}
+/*-----------------784px----------------------------*/
+@media (min-width: 784px){
+    .link{
+        gap: 25px;
+    }
+    .container-main{
+        display: flex;
+        gap: 48px;
+    }
+    p{
+        line-height: 20px;
+    }
+    .main-text {
+        width: 312px;
+        height: 160px;
+        margin-bottom: 10px;
+        margin-top: 32px;
+    }
+
+    .img{
+        height: 208px;
+        width: 360px;
+        background-size: 360px 208px;
+        margin-top: auto;
+    }
+}
+/*-----------------1120px---------------------------*/
+@media (min-width: 1120px){
+    .link{
+        flex-wrap: wrap;
+        margin-top: 8px;
+    }
+    .link__scroll:last-child{
+        margin-top:-20px;
+    }
+    .container-main{
+        gap: 36px;
+    }
+    .main-text {
+        width: 490px;
+        height: 160px;
+        margin-bottom: 13px;
+        margin-top: 19px;
+    }
+    .img{
+        height: 307px;
+        width: 531px;
+        background-size: 531px 307px;
+        margin-top: auto;
+    }
+}
+
+/*-------------ФУТЕР КАК ОТСТУП-----------------------------------*/
+footer{
+    min-width: 320px;
+    height: 35px;
+}
+@media (min-width: 784px){
+    footer{
+        height: 40px;
+    }
+}
+@media (min-width: 1120px){
+    footer{
+        height: 49px;
+    }
+}
