@@ -26,10 +26,7 @@ html{
 }
 body{
     margin: 0;
-    min-width: 320px;
-    overflow: hidden;
 }
-
 /*сбрасываем стиль кнопки*/
 button{
     border: none;
@@ -37,22 +34,34 @@ button{
     cursor: pointer;
     padding: 0;
 }
+li{
+    list-style-type:none;
+}
+a{
+    text-decoration: none; /* Убираем подчёркивание */
+    font-family: 'TT Lakes Regular';
+    font-size: 16px;
+    white-space:nowrap;
+    letter-spacing: -0.2px;
+    color: #7E7E82;
+
+}
 
 /*-------- ХЕДЕР + ИКОНКИ---------------------------------------------------------------------------------------------*/
 .header{
      margin: 0;
-     justify-content: center;
      background-color: white;
-     min-height: 88px;
      border: 1px solid #D9FFF5;
  }
 
-nav.menu {
+.menu {
     display: flex;
-    margin: 18px 16px 18px 16px;
     justify-content: space-between;
     align-items: center;
+    padding: 0 16px;
+    margin-bottom: 17px;
     }
+
 /* Иконки */
 .menu__img-burger,
 .menu__img-checkstatus,
@@ -61,80 +70,100 @@ nav.menu {
     height: 40px;
 }
 
-.menu__img-divider2{
-    width: 8px;
-    height: 32px;
-}
+
 
 .menu__logo{
+    display: inline-block;
     width: 96px;
     height: 51px;
 }
 
 /*--------- 320px ------------------------------*/
 @media (min-width: 320px) {
-    .menu__img-divider1,
     .menu__img-call,
     .menu__img-chat,
     .menu__img-profile,
     .menu__name-checkstatus,
-    .menu__name-repair,
-    .title-1120 {
+    .menu__name-repair
+    {
         display: none;
     }
+    .menu__6::before{
+        content: " ";
+        display: inline-block;
+        height: 35px;
+        border-left:#EAEAEA 2px solid ;
+        border-radius: 1px;
+    }
+    .menu__btn-repair{
+        margin-left: 16px;
+    }
+    .menu__2{
+        margin-left: 10px;
+    }
+
 }
 /*--------- 784px -----------------------------*/
 @media (min-width: 784px) {
-    .title-1120,
     .menu__name-checkstatus,
     .menu__name-repair{
         display: none;
     }
 
-    .menu__img-divider1,
     .menu__img-call,
     .menu__img-chat,
     .menu__img-profile{
         display: block;
     }
-    .menu__img-burger,
-    .menu__img-divider1{
+    .menu__img-burger{
         margin-right: 20px;
     }
 
-    .menu__logo{
-        margin-right: auto;
+    .menu__2{
+        margin-right: 250px;
+    }
+    .menu__2::before{
+        content: " ";
+        display: inline-block;
+        height: 35px;
+        border-left:#EAEAEA 2px solid ;
+        border-radius: 1px;
+        margin-right: 20px;
+        margin-bottom: 5px;
     }
 
     .menu__img-profile,
     .menu__img-chat,
     .menu__img-call,
-    .menu__img-divider2,
-    .menu__img-checkstatus,
-    .menu__img-repair{
+    .menu__img-checkstatus{
         margin-left: 16px;
     }
+    .menu__img-profile{
+        margin-right: 16px;
+    }
+
 }
 /*--------- 1120px ---------------------------*/
 @media (min-width: 1120px) {
     .header{
+        float: right;
         background-color:#F8F8F8;
         border: none;
     }
 
     .menu__btn-burger,
-    .menu__btn-divider1,
     .menu__logo,
     .menu__btn-chat,
     .menu__btn-call,
     .menu__btn-profile,
-    .menu__btn-divider2,
-    div.title{
+    .menu__6::before,
+    .menu__2::before{
         display: none;
     }
     .menu__name-checkstatus,
-    .menu__name-repair,
-    .title-1120{
+    .menu__name-repair
+    {
+        font-family: 'TT Lakes Regular';
         display: block;
     }
 
@@ -144,72 +173,74 @@ nav.menu {
         gap: 8px;
         align-items: center;
     }
-    nav.menu{
+
+    ul.menu{
         height: 82px;
         margin: 0;
-        padding-top: 42px;
         padding-right: 32px;
         justify-content: right;
         gap: 32px;
     }
-    .title-1120{
-        display: flex;
-        gap: 30px;
-        margin-right: auto;
-        align-items: center;
-    }
-    .title-1120__dash{
-        width: 3px;
-        height: 40px;
-    }
 }
 /*-----------КОНЕЦ ХЕДЕРА---------------------------------------------------------------------------------------------*/
 /*-----------ОСНОВНОЙ БЛОК---------------------------------------------------------------------------------------------*/
-#main{
+.main{
     background-color: #F8F8F8FF;
 }
 /* Заголовок --------------*/
-.title{
-    display: flex;
-    padding-top: 24px;
-    gap: 12px;
-}
-.title__dash{
-    margin-left: 0;
-}
+
 h1{
     font-family: 'TT Lakes Bold';
     font-weight: 700;
     font-size: 28px;
     line-height: 40px;
-    margin: 0;
     color: #1B1C21;
+    margin: 0;
+
+}
+.title::before{
+    content: " ";
+    display: inline-block;
+    height: 40px;
+    border-left:#41F6D7 4px solid ;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+.title{
+    display: flex;
+    margin-top: 24px;
 }
 
 /*ссылки с прокруткой---------*/
+
 .link{
     display: flex;
-    overflow: scroll;
-    margin-top: 24px;
+    overflow: auto;
+    margin-top: 20px;
     padding-left: 16px;
     gap: 28px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+}
+
+.link::-webkit-scrollbar {
+    width: 0;
+    height: 0;
 }
 
 .link__scroll {
-    text-decoration: none; /* Убираем подчёркивание */
-    font-family: 'TT Lakes Regular';
-    font-size: 16px;
-    white-space:nowrap;
-    letter-spacing: -0.2px;
-    color: #7E7E82;
     padding: 8px 13px;
-
+    border: 2px solid transparent;
 }
+
+
 
 .link__scroll:hover{
     background: #FFFFFF;
     border: 2px solid #B8FFEC;
     border-radius: 6px;
+
 }
 
 /*основной текст------------------*/
@@ -224,6 +255,7 @@ p{
 
 /*Читать далее-------------------*/
 .read-more{
+    display: flex;
     width: 132px;
     height: 24px;
     margin-left: 16px;
@@ -243,14 +275,13 @@ p{
     letter-spacing: -0.2px;
     color: #1B1C21;
 }
-.read-more__icon{
-    width: 24px;
-    height: 24px;
-}
-.img{
-    height: 176px;
-    background-image: url("https://helgataleriko.github.io/layout_1.3/src/img/main.logo.jpg");
-    background-size: 320px 176px;
+.read-more::before{
+    content: " ";
+    display: inline-block;
+    background-image: url("src/img/svg/icon.svg");
+    width: 8px;
+    height: 11px;
+    margin-top: 7px;
 }
 /*-----------------320px----------------------------*/
 @media (min-width: 320px) {
@@ -258,6 +289,10 @@ p{
         overflow: scroll;
         height: 90px;
         margin: 24px 16px 16px 16px;
+    }
+    .img{
+        width: 320px;
+        height: 176px;
     }
 }
 /*-----------------784px----------------------------*/
@@ -268,6 +303,7 @@ p{
     .container-main{
         display: flex;
         gap: 48px;
+        margin-top: 40px;
     }
     p{
         line-height: 20px;
@@ -275,25 +311,29 @@ p{
     .main-text {
         width: 312px;
         height: 160px;
-        margin-bottom: 10px;
-        margin-top: 32px;
+        margin-top: 0;
+    }
+    .img{
+        width: 360px;
+        height: 208px;
     }
 
-    .img{
-        height: 208px;
-        width: 360px;
-        background-size: 360px 208px;
-        margin-top: auto;
-    }
 }
 /*-----------------1120px---------------------------*/
 @media (min-width: 1120px){
     .link{
+        clear: both;
         flex-wrap: wrap;
         margin-top: 8px;
     }
-
+    .link{
+        margin: 0;
+    }
+    .title{
+       padding-top: 20px;
+    }
     .container-main{
+        margin-top: 0px;
         gap: 36px;
     }
     .main-text {
@@ -303,26 +343,9 @@ p{
         margin-top: 19px;
     }
     .img{
-        height: 307px;
         width: 531px;
-        background-size: 531px 307px;
-        margin-top: auto;
+        height: 307px;
     }
+
 }
 
-
-/*-------------ФУТЕР КАК ОТСТУП-----------------------------------*/
-footer{
-    min-width: 320px;
-    height: 35px;
-}
-@media (min-width: 784px){
-    footer{
-        height: 40px;
-    }
-}
-@media (min-width: 1120px){
-    footer{
-        height: 49px;
-    }
-}
