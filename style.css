@@ -278,7 +278,7 @@ p{
 .read-more::before{
     content: " ";
     display: inline-block;
-    background-image: url("src/img/svg/icon.svg");
+    background-image: url("https://helgataleriko.github.io/layout_1.3/src/img/svg/icon.svg");
     width: 8px;
     height: 11px;
     margin-top: 7px;
