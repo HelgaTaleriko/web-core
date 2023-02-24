@@ -50,32 +50,27 @@ a{
 /*-------- ХЕДЕР + ИКОНКИ---------------------------------------------------------------------------------------------*/
 .header{
      margin: 0;
-     background-color: white;
-     border: 1px solid #D9FFF5;
  }
 
 .menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 16px;
-    margin-bottom: 17px;
+    padding: 18px 16px;
+    margin: 0;
+    background-color: white;
+    border: 1px solid #D9FFF5;
     }
 
 /* Иконки */
 .menu__img-burger,
-.menu__img-checkstatus,
+.menu__img-status,
 .menu__img-repair {
     width: 40px;
-    height: 40px;
 }
-
-
-
 .menu__logo{
     display: inline-block;
     width: 96px;
-    height: 51px;
 }
 
 /*--------- 320px ------------------------------*/
@@ -83,12 +78,12 @@ a{
     .menu__img-call,
     .menu__img-chat,
     .menu__img-profile,
-    .menu__name-checkstatus,
+    .menu__name-status,
     .menu__name-repair
     {
         display: none;
     }
-    .menu__6::before{
+    .menu__icon-repair::before{
         content: " ";
         display: inline-block;
         height: 35px;
@@ -98,14 +93,14 @@ a{
     .menu__btn-repair{
         margin-left: 16px;
     }
-    .menu__2{
+    .menu__icon-logo{
         margin-left: 10px;
     }
 
 }
-/*--------- 784px -----------------------------*/
-@media (min-width: 784px) {
-    .menu__name-checkstatus,
+/*--------- 768px -----------------------------*/
+@media (min-width: 768px) {
+    .menu__name-status,
     .menu__name-repair{
         display: none;
     }
@@ -119,10 +114,10 @@ a{
         margin-right: 20px;
     }
 
-    .menu__2{
-        margin-right: 250px;
+    .menu__icon-logo{
+        margin-right: 230px;
     }
-    .menu__2::before{
+    .menu__icon-logo::before{
         content: " ";
         display: inline-block;
         height: 35px;
@@ -135,7 +130,7 @@ a{
     .menu__img-profile,
     .menu__img-chat,
     .menu__img-call,
-    .menu__img-checkstatus{
+    .menu__img-status{
         margin-left: 16px;
     }
     .menu__img-profile{
@@ -146,9 +141,15 @@ a{
 /*--------- 1120px ---------------------------*/
 @media (min-width: 1120px) {
     .header{
-        float: right;
+        display: flex;
+    }
+    .menu{
         background-color:#F8F8F8;
         border: none;
+        margin-left: auto;
+        padding-right: 32px;
+        justify-content: right;
+        gap: 32px;
     }
 
     .menu__btn-burger,
@@ -156,11 +157,11 @@ a{
     .menu__btn-chat,
     .menu__btn-call,
     .menu__btn-profile,
-    .menu__6::before,
-    .menu__2::before{
+    .menu__icon-repair::before,
+    .menu__icon-logo::before{
         display: none;
     }
-    .menu__name-checkstatus,
+    .menu__name-status,
     .menu__name-repair
     {
         font-family: 'TT Lakes Regular';
@@ -168,19 +169,13 @@ a{
     }
 
     .menu__btn-repair,
-    .menu__btn-checkstatus{
+    .menu__btn-status{
+        font-family: 'TT Lakes Regular';
         display: flex;
         gap: 8px;
         align-items: center;
     }
 
-    ul.menu{
-        height: 82px;
-        margin: 0;
-        padding-right: 32px;
-        justify-content: right;
-        gap: 32px;
-    }
 }
 /*-----------КОНЕЦ ХЕДЕРА---------------------------------------------------------------------------------------------*/
 /*-----------ОСНОВНОЙ БЛОК---------------------------------------------------------------------------------------------*/
@@ -188,15 +183,17 @@ a{
     background-color: #F8F8F8FF;
 }
 /* Заголовок --------------*/
+.title{
+    display: flex;
+    padding-top: 20px;}
 
-h1{
+.title__text{
     font-family: 'TT Lakes Bold';
     font-weight: 700;
     font-size: 28px;
     line-height: 40px;
     color: #1B1C21;
     margin: 0;
-
 }
 .title::before{
     content: " ";
@@ -206,10 +203,6 @@ h1{
     margin-right: 20px;
     border-radius: 10px;
 }
-.title{
-    display: flex;
-    margin-top: 24px;
-}
 
 /*ссылки с прокруткой---------*/
 
@@ -217,6 +210,7 @@ h1{
     display: flex;
     overflow: auto;
     margin-top: 20px;
+    margin-bottom: 0;
     padding-left: 16px;
     gap: 28px;
     -ms-overflow-style: none;
@@ -229,12 +223,12 @@ h1{
     height: 0;
 }
 
-.link__scroll {
+.link__scroll{
+    display: inline-block;
+    text-align: center;
     padding: 8px 13px;
     border: 2px solid transparent;
 }
-
-
 
 .link__scroll:hover{
     background: #FFFFFF;
@@ -244,6 +238,11 @@ h1{
 }
 
 /*основной текст------------------*/
+.main-text{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 p{
     font-family: 'TT Lakes Regular';
     font-size: 14px;
@@ -263,30 +262,28 @@ p{
 }
 .read-more__btn{
     padding: 0;
-    width: 132px ;
-    height: 24px;
     font-family: 'TT Lakes Regular';
     font-weight:600;
     font-size: 16px;
     line-height: 24px;
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     letter-spacing: -0.2px;
     color: #1B1C21;
 }
-.read-more::before{
+.read-more__btn::before{
     content: " ";
     display: inline-block;
-    background-image: url("https://helgataleriko.github.io/layout_1.3/src/img/svg/icon.svg");
+    background-image: url("src/img/svg/icon.svg");
     width: 8px;
     height: 11px;
-    margin-top: 7px;
+    margin-right: 16px;
 }
 /*-----------------320px----------------------------*/
 @media (min-width: 320px) {
     .main-text{
-        overflow: scroll;
+        overflow: hidden;
         height: 90px;
         margin: 24px 16px 16px 16px;
     }
@@ -295,8 +292,8 @@ p{
         height: 176px;
     }
 }
-/*-----------------784px----------------------------*/
-@media (min-width: 784px){
+/*-----------------768px----------------------------*/
+@media (min-width: 768px){
     .link{
         gap: 25px;
     }
@@ -330,7 +327,7 @@ p{
         margin: 0;
     }
     .title{
-       padding-top: 20px;
+        order: -1;
     }
     .container-main{
         margin-top: 0px;
