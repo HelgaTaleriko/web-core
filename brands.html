@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Brands</title>
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <link href="style.css" rel="stylesheet">
+
+</head>
+<body class="body-brands">
+<header>
+    <div class="header-brands">
+        <span class="header-brands__title">
+            Ремонт техники различных брендов
+        </span>
+    </div>
+</header>
+<main >
+    <div class="slider-container">
+        <div class="brands-container swiper-container" id="brands1">
+            <div class="brands-wrapper swiper-wrapper">
+                <div class="brands-slide swiper-slide lenovo">
+                    <img
+                            width="108"
+                            height="32"
+                            src="src/img/svg/svg-brands/lenovo.svg"
+                    >
+                    <a href="#">
+                        <img src="src/img/svg/svg-brands/go.svg">
+                    </a>
+                </div>
+                <div class="brands-slide swiper-slide samsung">
+                    <img
+                            width="116"
+                            height="38"
+                            src="src/img/svg/svg-brands/samsung.svg"
+                    >
+                    <a href="#">
+                        <img src="src/img/svg/svg-brands/go.svg">
+                    </a>
+                </div>
+                <div class="brands-slide swiper-slide apple">
+                    <img
+                            width="44"
+                            height="44"
+                            src="src/img/svg/svg-brands/apple.svg">
+                    <a href="#">
+                        <img src="src/img/svg/svg-brands/go.svg">
+                    </a>
+                </div>
+                <div class="brands-slide swiper-slide sonic">
+                    <img
+                            width="128"
+                            height="21"
+                            src="src/img/svg/svg-brands/sonic.svg">
+                    <a href="#">
+                        <img src="src/img/svg/svg-brands/go.svg">
+                    </a>
+                </div>
+                <div class="brands-slide swiper-slide bosch">
+                    <img
+                            width="128"
+                            height="28"
+                            src="src/img/svg/svg-brands/bosch.svg">
+                    <a href="#">
+                        <img src="src/img/svg/svg-brands/go.svg">
+                    </a>
+                </div>
+                <div class="brands-slide swiper-slide hp">
+                    <img
+                            width="52"
+                            height="52"
+                            src="src/img/svg/svg-brands/hp.svg">
+                    <a href="#">
+                        <img src="src/img/svg/svg-brands/go.svg">
+                    </a>
+                </div>
+                <div class="brands-slide swiper-slide acer">
+                    <img
+                            width="94"
+                            height="24"
+                            src="src/img/svg/svg-brands/acer.svg">
+                    <a href="#">
+                        <img src="src/img/svg/svg-brands/go.svg">
+                    </a>
+                </div>
+                <div class="brands-slide swiper-slide sony">
+                    <img
+                            width="128"
+                            height="25"
+                            src="src/img/svg/svg-brands/sony.svg">
+                    <a href="#">
+                        <img src="src/img/svg/svg-brands/go.svg">
+                    </a>
+                </div>
+                <div class="brands-slide swiper-slide lenovo">
+                    <img
+                            width="108"
+                            height="32"
+                            src="src/img/svg/svg-brands/lenovo.svg">
+                    <a href="#">
+                        <img src="src/img/svg/svg-brands/go.svg">
+                    </a>
+                </div>
+                <div class="brands-slide swiper-slide samsung">
+                    <img
+                            width="116"
+                            height="38"
+                            src="src/img/svg/svg-brands/samsung.svg">
+                    <a href="#">
+                        <img src="src/img/svg/svg-brands/go.svg">
+                    </a>
+                </div>
+                <div class="brands-slide swiper-slide apple">
+                    <img
+                            width="44"
+                            height="44"
+                            src="src/img/svg/svg-brands/apple.svg">
+                    <a href="#">
+                        <img src="src/img/svg/svg-brands/go.svg">
+                    </a>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+
+        </div>
+    </div>
+    <div class="button">
+        <button class="button__onOpen"
+                id="brands1_1"
+                onclick="onOpen()"
+                style="display:none;">
+            <img src="src/img/svg/svg-brands/open.svg">
+            Показать все
+        </button>
+        <button class="button__onClose"
+                id="brands1_2"
+                onclick="onClose()">
+            <img src="src/img/svg/svg-brands/close.svg">
+            Скрыть
+        </button>
+    </div>
+
+</main>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script class="swiper" src="script.js"></script>
+<script src="button_onOpen_onClose.js"></script>
+</body>
+</html>

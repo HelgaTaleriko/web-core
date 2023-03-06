@@ -345,7 +345,7 @@ p{
     }
 
 }
-/*------------------------------------------------------------------------------*/
+/*------------------МАКЕТ 1.4 МЕНЮ МОБИЛЬНОЕ------------------------------------------------------------*/
 .mobile-menu{
     position: absolute;
     left: 0;
@@ -360,7 +360,15 @@ p{
     display: flex;
     padding-left: 24px;
     gap:16px;
+
 }
+.mobile-menu__icon{
+    width: 40px;
+    height: 40px;
+    background-color: #FF3E79;
+    border-radius: 20px;
+}
+
 .header-mobile__elements:last-child{
     margin-left: auto;
     padding-right: 24px;
@@ -437,6 +445,72 @@ p{
 }
 .lang__elements a:hover{
     filter: contrast(10%);
+}
+/* ----------------------БРЕНДЫ МАКЕТ 1.5--------------------*/
+.body-brands main{
+    padding: 24px;
+}
+.header-brands{
+    background: linear-gradient(50deg, #F8F8F8 0%, #FFFFFF 98.61%);
+    padding: 16px;
+}
+.header-brands__title{
+    font-family: 'TT Lakes Regular';
+    text-transform: uppercase;
+    color: #7E7E82;
+}
+.slider-container{
+    background-color: #F8F8F8;
+    padding-bottom: 24px;
 
 }
+
+.brands-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.brands-slide{
+    display: flex;
+    border:1px solid #EAEAEA;
+    border-radius: 6px;
+    background-color:#FFFFFF;
+    width: 190px;
+    height: 52px;
+    justify-content: space-between;
+    padding: 10px 16px ;
+    align-items: center;
+}
+
+.swiper-pagination{
+    padding-top: 24px;
+    position: static;
+
+}
+.swiper-pagination-bullet{
+    width: 12px;
+    height: 12px;
+    background-color: rgba(164, 163, 163, 0.88);
+}
+.swiper-pagination-bullet-active{
+    background-color: #B5B6BC;
+}
+.button__onOpen,
+.button__onClose{
+    display: flex;
+    font-family: 'TT Lakes Regular';
+    gap: 13px;
+    align-items: center;
+}
+@media (max-width: 767px) {
+    .button{
+        display: none;
+    }
+    .brands-wrapper{
+        flex-wrap: nowrap;
+    }
+    
+}
+
 
