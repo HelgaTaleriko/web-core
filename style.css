@@ -356,11 +356,11 @@ p{
     min-height: 100vh;
     box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
 }
-.header-mobile__group{
+.header-mobile{
     display: flex;
     padding-left: 24px;
+    padding-top: 20px;
     gap:16px;
-
 }
 .mobile-menu__icon{
     width: 40px;
@@ -368,8 +368,17 @@ p{
     background-color: #FF3E79;
     border-radius: 20px;
 }
-
-.header-mobile__elements:last-child{
+.header-mobile__icon_close{
+    background-image: url("/src/img/svg/svg_mobile/X.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.header-mobile__icon_search{
+    background-image: url("/src/img/svg/svg_mobile/search.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.header-mobile__icon:last-child{
     margin-left: auto;
     padding-right: 24px;
 }
@@ -410,37 +419,50 @@ p{
 .footer-mobile{
     margin-top: auto;
     margin-bottom: 32px;
-}
-.contact-mobile{
-    margin-left: 24px;
+    padding-left: 24px;
     display: flex;
     flex-direction: column;
-    gap:16px;
-
+    gap: 16px;
 }
-.contact-mobile a {
+
+.footer-mobile__tel{
     color: #1B1C21;
-}
-
-.contact-mobile__tel{
     font-size: 24px;
     font-family: 'TT Lakes Bold';
 }
-.contact-mobile__email{
+.footer-mobile__email{
     font-size: 16px;
-
+    color: #1B1C21;
 }
-.contact-mobile__group{
+.footer-mobile__group{
     display: flex;
     gap:16px;
     padding: 0;
+    margin-right: auto;
 }
-.lang__group{
+.footer-mobile__icon_call{
+    background-image: url("/src/img/svg/svg_mobile/call.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.footer-mobile__icon_chat{
+    background-image: url("/src/img/svg/svg_mobile/chat.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.footer-mobile__icon_profile{
+    background-image: url("/src/img/svg/svg_mobile/profile.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.footer-mobile__lang{
     font-family: 'TT Lakes Regular';
+    padding-top: 10px;
     font-size: 16px;
     display: flex;
     gap: 7px;
-    padding: 0;
+}
+.lang__elements a{
     color: #1B1C21;
 }
 .lang__elements a:hover{
