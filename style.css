@@ -275,7 +275,7 @@ p{
 .read-more__btn::before{
     content: " ";
     display: inline-block;
-    background-image: url("src/img/svg/icon.svg");
+    background-image: url("./src/img/svg/icon.svg");
     width: 8px;
     height: 11px;
     margin-right: 16px;
@@ -369,12 +369,12 @@ p{
     border-radius: 20px;
 }
 .header-mobile__icon_close{
-    background-image: url("/src/img/svg/svg-mobile/X.svg");
+    background-image: url("./src/img/svg/svg-mobile/X.svg");
     background-repeat: no-repeat;
     background-position: center;
 }
 .header-mobile__icon_search{
-    background-image: url("/src/img/svg/svg-mobile/search.svg");
+    background-image: url("./src/img/svg/svg-mobile/search.svg");
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -441,17 +441,17 @@ p{
     margin-right: auto;
 }
 .footer-mobile__icon_call{
-    background-image: url("/src/img/svg/svg-mobile/call.svg");
+    background-image: url("./src/img/svg/svg-mobile/call.svg");
     background-repeat: no-repeat;
     background-position: center;
 }
 .footer-mobile__icon_chat{
-    background-image: url("/src/img/svg/svg-mobile/chat.svg");
+    background-image: url("./src/img/svg/svg-mobile/chat.svg");
     background-repeat: no-repeat;
     background-position: center;
 }
 .footer-mobile__icon_profile{
-    background-image: url("/src/img/svg/svg-mobile/profile.svg");
+    background-image: url("./src/img/svg/svg-mobile/profile.svg");
     background-repeat: no-repeat;
     background-position: center;
 }
